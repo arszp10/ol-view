@@ -1,0 +1,1 @@
+export default function lol(a:number, b:number){return a+b}
