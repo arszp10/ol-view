@@ -1,1 +1,3 @@
-export default function lol(a:number, b:number){return a+b}
+export default function lol(a: number, b: number): number {
+  return a + b;
+}

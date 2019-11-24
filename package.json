@@ -26,7 +26,6 @@
     "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-sonarjs": "^0.5.0",
-    "git-cz": "^3.3.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
@@ -39,8 +38,60 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "precommit": "lint-staged",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix --max-warnings=0",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "tabWidth": 2,
+    "semi": true
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "prettier",
+      "sonarjs"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:sonarjs/recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "tsconfigRootDir": "."
+    },
+    "rules": {}
   }
 }
