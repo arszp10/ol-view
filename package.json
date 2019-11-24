@@ -1,5 +1,5 @@
 {
-  "name": "ol-view",
+  "name": "@arszp10@ol-view",
   "version": "0.0.0",
   "description": "openlayers view save last position",
   "main": "dist/ol-view.cjs.js",
