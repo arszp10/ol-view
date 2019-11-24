@@ -41,7 +41,6 @@
     "dev": "rollup -c -w",
     "precommit": "lint-staged",
     "lint": "eslint --debug src/",
-    "lint:write": "eslint --debug src/ --fix",
-    "commit": "git-cz"
+    "lint:write": "eslint --debug src/ --fix"
   }
 }
