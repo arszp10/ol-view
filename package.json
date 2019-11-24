@@ -48,6 +48,6 @@
     "precommit": "lint-staged",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix",
-    "commit": "npx git-cz"
+    "commit": "git-cz"
   }
 }
