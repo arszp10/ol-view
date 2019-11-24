@@ -19,7 +19,6 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
-    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.7.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-import-resolver-typescript": "^2.0.0",
@@ -36,11 +35,6 @@
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-typescript": "1.0.1",
     "typescript": "3.7.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "scripts": {
     "build": "rollup -c",
