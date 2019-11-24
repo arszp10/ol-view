@@ -47,6 +47,7 @@
     "dev": "rollup -c -w",
     "precommit": "lint-staged",
     "lint": "eslint --debug src/",
-    "lint:write": "eslint --debug src/ --fix"
+    "lint:write": "eslint --debug src/ --fix",
+    "commit": "npx git-cz"
   }
 }
